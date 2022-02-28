@@ -20,6 +20,6 @@ console.log("decoding hex");
 const answers = Array.from(document.querySelectorAll(".ama-answer-content, .ama-author-name"));
 
 answers.forEach(function(ans) {
-  ans.innerText = ans.innerText.replaceAll(" ", "");
+  ans.innerText = ans.innerText.replaceAll(" ", "0A");
   ans.innerText = hex2ascii8(ans.innerText);
 });
