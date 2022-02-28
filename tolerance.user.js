@@ -15,6 +15,11 @@ function hex2ascii8(hex_)
         str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
     return str;
 }
+
 console.log("decoding hex");
 const answers = Array.from(document.querySelectorAll(".ama-answer-content, .ama-author-name"));
-answers.forEach(ans => ans.innerText = hex2ascii8(ans.innerText));
+
+answers.forEach(function(ans) {
+  ans.innerText = ans.innerText.replaceAll(" ", "");
+  ans.innerText = hex2ascii8(ans.innerText);
+});
